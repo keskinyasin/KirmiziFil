@@ -1,0 +1,26 @@
+Build
+bin/ obj/
+Visual Studio
+.vs/ *.user *.suo *.userosscache
+Rider
+.idea/
+VS Code
+.vscode/
+NuGet
+*.nupkg *.snupkg packages/
+Node / npm / libman
+node_modules/ wwwroot/lib/
+Logs
+*.log
+npm
+package-lock.json yarn.lock
+Sass / maps
+*.css.map
+Publish
+publish/ *.publish/
+Uploads / user content
+wwwroot/uploads/
+OS
+.DS_Store Thumbs.db
+VS test results
+TestResults/

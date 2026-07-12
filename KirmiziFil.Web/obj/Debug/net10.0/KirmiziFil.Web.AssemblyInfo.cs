@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KirmiziFil.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d52b1340a5ecfcc1c7fc745e9d337587df8de471")]
 [assembly: System.Reflection.AssemblyProductAttribute("KirmiziFil.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KirmiziFil.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
