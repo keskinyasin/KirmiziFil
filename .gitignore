@@ -1,36 +1,65 @@
-Build
-bin/ obj/
-Visual Studio
-.vs/ *.user *.suo *.userosscache
-Rider
-.idea/
-VS Code
-.vscode/
+Visual Studio / IDE
+
+.vs/ 
+.vscode/ 
+*.user 
+*.suo 
+*.userosscache 
+*.sln.docstates 
+.idea/ 
+*.iml
+
+Build outputs
+
+bin/ 
+obj/ 
+publish/ 
+artifacts/
+
 NuGet
-*.nupkg *.snupkg packages/
-Node / npm / libman
-node_modules/ wwwroot/lib/
-Logs
-*.log
-npm
-package-lock.json yarn.lock
-Sass / maps
+
+*.nupkg 
+*.snupkg 
+packages/
+
+.NET specifics
+
+project.lock.json 
+project.fragment.lock.json 
+*.db
+
+Node / npm / libman / frontend
+
+node_modules/ 
+wwwroot/lib/ 
+package-lock.json 
+yarn.lock
+
+SCSS / Sass (kaynakları da ignore etmek istersen)
+
 *.css.map
-Publish
-publish/ *.publish/
+
+Frontend / PWA build outputs
+
+wwwroot/dist/ 
+wwwroot/assets/ 
+service-worker.js 
+precache-manifest*
+
 Uploads / user content
+
 wwwroot/uploads/
-OS
-.DS_Store Thumbs.db
-VS test results
+
+Logs / test results
+
+*.log 
 TestResults/
-Build
-bin/ obj/
-Visual Studio
-.vs/ *.user *.suo *.userosscache
-VS Code
-.vscode/
-Node / npm
-node_modules/ wwwroot/lib/ package-lock.json yarn.lock
+
 OS
-.DS_Store Thumbs.db
+
+.DS_Store 
+Thumbs.db
+
+Local IDE / tool files
+
+.slnx
