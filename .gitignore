@@ -24,3 +24,13 @@ OS
 .DS_Store Thumbs.db
 VS test results
 TestResults/
+Build
+bin/ obj/
+Visual Studio
+.vs/ *.user *.suo *.userosscache
+VS Code
+.vscode/
+Node / npm
+node_modules/ wwwroot/lib/ package-lock.json yarn.lock
+OS
+.DS_Store Thumbs.db
