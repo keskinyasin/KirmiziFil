@@ -6,4 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="assets\scss\abstracts\" />
+    <Folder Include="assets\scss\base\" />
+    <Folder Include="assets\scss\layout\" />
+    <Folder Include="assets\scss\components\" />
+    <Folder Include="assets\scss\vendors\" />
+    <Folder Include="assets\scss\pages\" />
+    <Folder Include="wwwroot\image\" />
+    <Folder Include="wwwroot\icons\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\animations\" />
+    <Folder Include="wwwroot\videos\" />
+  </ItemGroup>
+
 </Project>
