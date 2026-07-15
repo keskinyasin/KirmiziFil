@@ -1,0 +1,21 @@
+/* ==========================================
+   CONTAINER
+========================================== */
+
+@use "../abstracts/spacing" as *;
+@use "../abstracts/breakpoints" as *;
+
+.container {
+    width: min(100% - ($space-32 * 2), 1440px);
+    margin-inline: auto;
+}
+
+.container-sm {
+    width: min(100% - ($space-32 * 2), 960px);
+    margin-inline: auto;
+}
+
+.container-lg {
+    width: min(100% - ($space-32 * 2), 1600px);
+    margin-inline: auto;
+}

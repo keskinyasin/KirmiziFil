@@ -1,0 +1,17 @@
+/* ==========================================
+   FUNCTIONS
+========================================== */
+
+@use "sass:math";
+
+/* PX → REM */
+
+@function rem($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+/* PX → EM */
+
+@function em($px) {
+    @return math.div($px, 16) * 1em;
+}
