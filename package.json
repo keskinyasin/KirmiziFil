@@ -1,0 +1,22 @@
+{
+  "name": "kirmizifil",
+  "version": "1.0.0",
+  "description": "Kırmızı Fil; onarım kültürünü, döngüsel ekonomiyi, ikinci el kullanımını, topluluk dayanışmasını ve sosyal girişimciliği bir araya getiren modern bir dijital platformdur.",
+  "private": true,
+  "scripts": {
+    "watch": "sass --watch KirmiziFil.Web/Assets/scss/main.scss:KirmiziFil.Web/wwwroot/css/style.css --style=expanded",
+    "build": "sass KirmiziFil.Web/Assets/scss/main.scss:KirmiziFil.Web/wwwroot/css/style.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keskinyasin/KirmiziFil.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keskinyasin/KirmiziFil/issues"
+  },
+  "homepage": "https://github.com/keskinyasin/KirmiziFil#readme",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

@@ -1,0 +1,27 @@
+/* ==========================================
+   BASE
+========================================== */
+
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: $color-background;
+    color: $color-text;
+    font-family: $font-primary;
+    font-size: $text-md;
+    font-weight: $font-regular;
+    line-height: $leading-normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-text-light;
+}

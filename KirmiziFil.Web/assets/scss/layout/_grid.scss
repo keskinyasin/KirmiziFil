@@ -1,0 +1,40 @@
+/* ==========================================
+   GRID
+========================================== */
+
+@use "../abstracts/spacing" as *;
+
+/* Base Grid */
+
+.grid {
+    display: grid;
+    gap: $space-32;
+}
+
+/* Auto Fit */
+
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $space-32;
+}
+
+/* Fixed Columns */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-32;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-32;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-32;
+}
