@@ -1,0 +1,51 @@
+.hero {
+    padding-block: $space-96;
+}
+
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: $space-64;
+    }
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-24;
+}
+
+.hero__eyebrow {
+    color: $color-primary;
+    font-size: $text-sm;
+    font-weight: $font-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.hero__title {
+    font-family: $font-heading;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    color: $color-text;
+}
+
+.hero__description {
+    max-width: 620px;
+    color: $color-text-muted;
+    font-size: $text-lg;
+    line-height: 1.8;
+}
+
+.hero__actions {
+    display: flex;
+    gap: $space-16;
+    margin-top: $space-16;
+}
+
+.hero__illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 650px;
+}

@@ -1,4 +1,81 @@
-﻿@page
-@model KirmiziFil.Web.Views.Shared._NavigationModel
-@{
-}
+﻿```cshtml
+<nav class="nav">
+
+    <!-- Logo -->
+
+    <a asp-controller="Home"
+       asp-action="Index"
+       class="nav__logo">
+
+        Kırmızı Fil
+
+    </a>
+
+    <!-- Menu -->
+
+    <ul class="nav__menu">
+
+        <li>
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="nav__link">
+                Ana Sayfa
+            </a>
+        </li>
+
+        <li>
+            <a href="#repair"
+               class="nav__link">
+                Repair Cafe
+            </a>
+        </li>
+
+        <li>
+            <a href="#market"
+               class="nav__link">
+                İkinci El
+            </a>
+        </li>
+
+        <li>
+            <a href="#workshop"
+               class="nav__link">
+                Atölyeler
+            </a>
+        </li>
+
+        <li>
+            <a href="#events"
+               class="nav__link">
+                Etkinlikler
+            </a>
+        </li>
+
+        <li>
+            <a href="#blog"
+               class="nav__link">
+                Blog
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- Actions -->
+
+    <div class="nav__actions">
+
+        <button class="btn btn--text btn--sm">
+            TR
+        </button>
+
+        <a href="#community"
+           class="btn btn--primary btn--md">
+
+            Topluluğa Katıl
+
+        </a>
+
+    </div>
+
+</nav>
+```

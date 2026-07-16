@@ -1,0 +1,43 @@
+```scss
+/* ==========================================
+   BADGE
+========================================== */
+@use "../abstracts/colors" as *
+;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/radius" as *;
+@use "../abstracts/typography" as *;
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-4 $space-12;
+    border-radius: $radius-pill;
+    font-size: $text-sm;
+    font-weight: $font-semibold;
+    line-height: 1;
+}
+
+.badge--primary {
+    background: $color-primary;
+    color: $color-text-light;
+}
+
+.badge--secondary {
+    background: $color-secondary;
+    color: $color-text-light;
+}
+
+.badge--success {
+    background: $color-success;
+    color: $color-text-light;
+}
+
+.badge--outline {
+    background: transparent;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+}
+
+```

@@ -1,0 +1,32 @@
+```scss
+/* ==========================================
+   SECTION
+========================================== */
+@use "../abstracts/spacing" as *
+;
+
+.section {
+    padding-block: $space-96;
+}
+
+.section--sm {
+    padding-block: $space-64;
+}
+
+.section--lg {
+    padding-block: $space-120;
+}
+
+.section__header {
+    margin-bottom: $space-48;
+}
+
+.section__title {
+    margin-bottom: $space-16;
+}
+
+.section__description {
+    max-width: 720px;
+}
+
+```
