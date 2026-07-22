@@ -5,14 +5,15 @@
 @use "../abstracts/colors" as *;
 @use "../abstracts/spacing" as *;
 @use "../abstracts/shadows" as *;
+@use "../abstracts/z-index" as *;
 @use "../abstracts/transitions" as *;
 
 .header {
     position: sticky;
     top: 0;
-    z-index: 300;
-    background-color: rgba(255, 255, 255, 0.92);
+    z-index: $z-header;
+    background-color: $color-header-bg;
     backdrop-filter: blur(16px);
-    box-shadow: $shadow-sm;
-    transition: $transition-normal;
+    box-shadow: $shadow-xl;
+    padding-block: .35rem;
 }

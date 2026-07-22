@@ -29,6 +29,19 @@ $green-700: #355545;
 $green-800: #294136;
 $green-900: #1A2B23;
 
+/* ========= BLUE ========= */
+
+$blue-50: #F0F5FA;
+$blue-100: #D9E6F2;
+$blue-200: #B3CDE6;
+$blue-300: #82AAD4;
+$blue-400: #5B88C0;
+$blue-500: #3D6BA3; // Kafe accent
+$blue-600: #325887;
+$blue-700: #27456A;
+$blue-800: #1C324D;
+$blue-900: #121F30;
+
 /* ========= MUSTARD ========= */
 
 $mustard-50: #FFF9EC;
@@ -36,7 +49,7 @@ $mustard-100: #FDF0CC;
 $mustard-200: #F9DE96;
 $mustard-300: #F2C85C;
 $mustard-400: #E4B03A;
-$mustard-500: #C9971F; // Brand Accent
+$mustard-500: #C9971F;
 $mustard-600: #A97F1A;
 $mustard-700: #886515;
 $mustard-800: #674D10;
@@ -55,6 +68,26 @@ $neutral-700: #46433D;
 $neutral-800: #2F2D29;
 $neutral-900: #1C1B18;
 
+/* ========= PAPER ========= */
+
+$paper-base: #EFD19B; 
+$paper-shadow: #B39B6B; 
+$paper-highlight: #EEE0BA; 
+$paper-vignette: #4A3A28;
+
+/* ========= PETROL ========= */
+
+$petrol-50: #E8F0EF;
+$petrol-100: #C7DEDB;
+$petrol-200: #9FC7C1;
+$petrol-300: #6FA69E;
+$petrol-400: #438079;
+$petrol-500: #2C6660;
+$petrol-600: #24534E;
+$petrol-700: #1C403D;
+$petrol-800: #142E2B;
+$petrol-900: #0D1F1D;
+
 /* ==========================================
    SEMANTIC TOKENS
 ========================================== */
@@ -71,7 +104,7 @@ $color-accent: $mustard-500;
 
 /* Background */
 
-$color-background: $neutral-50;
+$color-background: $paper-base;
 $color-surface: #FFFFFF;
 $color-surface-alt: $neutral-100;
 
@@ -92,3 +125,8 @@ $color-success: $green-500;
 $color-warning: $mustard-500;
 $color-error: $red-500;
 $color-info: $green-400;
+
+/* Header */
+
+$color-header-bg: $petrol-700;
+$color-header-text: $paper-highlight; 

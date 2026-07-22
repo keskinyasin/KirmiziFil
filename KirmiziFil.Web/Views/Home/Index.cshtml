@@ -1,7 +1,8 @@
-﻿```cshtml
+﻿@model KirmiziFil.Web.ViewModels.HomeViewModel
+
 @{
     ViewData["Title"] = "Ana Sayfa";
 }
 
-<partial name="_Hero" />
-```
+@await Html.PartialAsync("_Hero", Model.Hero)
+@await Html.PartialAsync("_Events", Model.Events)

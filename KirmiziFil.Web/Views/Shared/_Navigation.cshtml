@@ -1,66 +1,35 @@
-﻿```cshtml
-<nav class="nav">
-
-    <!-- Logo -->
+﻿<nav class="nav">
 
     <a asp-controller="Home"
        asp-action="Index"
        class="nav__logo">
 
-        Kırmızı Fil
+        <div class="nav__logo-top">
+            <span class="nav__logo-icon">🐘</span>
+            <span class="nav__logo-text">
+                Kırmızı Fil
+            </span>
+        </div>
+
+        <span class="nav__eyebrow">
+            REPAIR • 2. EL • WORKSHOP • KAFE
+        </span>
 
     </a>
 
-    <!-- Menu -->
-
     <ul class="nav__menu">
 
-        <li>
-            <a asp-controller="Home"
-               asp-action="Index"
-               class="nav__link">
-                Ana Sayfa
-            </a>
-        </li>
+        <li><a href="#" class="nav__link">Repair</a></li>
 
-        <li>
-            <a href="#repair"
-               class="nav__link">
-                Repair Cafe
-            </a>
-        </li>
+        <li><a href="#" class="nav__link">İkinci El</a></li>
 
-        <li>
-            <a href="#market"
-               class="nav__link">
-                İkinci El
-            </a>
-        </li>
+        <li><a href="#" class="nav__link">Atölyeler</a></li>
 
-        <li>
-            <a href="#workshop"
-               class="nav__link">
-                Atölyeler
-            </a>
-        </li>
+        <li><a href="#" class="nav__link">Etkinlikler</a></li>
 
-        <li>
-            <a href="#events"
-               class="nav__link">
-                Etkinlikler
-            </a>
-        </li>
-
-        <li>
-            <a href="#blog"
-               class="nav__link">
-                Blog
-            </a>
-        </li>
+        <li><a href="#" class="nav__link">Blog</a></li>
 
     </ul>
-
-    <!-- Actions -->
 
     <div class="nav__actions">
 
@@ -68,7 +37,7 @@
             TR
         </button>
 
-        <a href="#community"
+        <a href="#"
            class="btn btn--primary btn--md">
 
             Topluluğa Katıl
@@ -78,4 +47,3 @@
     </div>
 
 </nav>
-```

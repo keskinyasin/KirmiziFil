@@ -1,49 +1,117 @@
-﻿```cshtml
+﻿@model KirmiziFil.Web.ViewModels.HeroViewModel
+
 <section class="hero">
 
-    <div class="container">
+    <div class="container hero__container">
 
         <div class="hero__content">
 
-            <span class="hero__eyebrow">
-                Repair • Reuse • Community
-            </span>
-
             <h1 class="hero__title">
-                Hayat burada,
-                <br />
-                ya sen neredesin?
+
+                <span>ONAR.</span>
+
+                <span>DÖNÜŞTÜR.</span>
+
+                <span class="hero__highlight">PAYLAŞ.</span>
+
             </h1>
 
             <p class="hero__description">
-                Kırmızı Fil; onarım kültürünü, ikinci el kullanımını,
-                döngüsel ekonomiyi ve topluluk dayanışmasını aynı çatı
-                altında buluşturan modern bir sosyal girişimdir.
+                @Model.Description
             </p>
 
             <div class="hero__actions">
 
-                <a href="#community"
-                   class="btn btn--primary btn--lg">
-                    Topluluğa Katıl
+                <a href="@Model.PrimaryButtonUrl"
+                   class="btn btn--primary btn--md">
+                    @Model.PrimaryButtonText
                 </a>
 
-                <a href="#manifesto"
-                   class="btn btn--outline btn--lg">
-                    Manifestoyu Oku
+                <a href="@Model.SecondaryButtonUrl"
+                   class="btn btn--outline btn--md">
+                    @Model.SecondaryButtonText
                 </a>
 
             </div>
 
         </div>
 
-        <div class="hero__illustration">
+        <div class="hero__image">
 
-            <!-- Animasyonlu Fil buraya gelecek -->
+            <img src="@Model.Image"
+                 class="hero__elephant"
+                 alt="Kırmızı Fil" />
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="hero__cards">
+
+            <article class="hero-card hero-card--red">
+
+                <div class="hero-card__header">
+                    <h3>Repair</h3>
+                </div>
+
+                <div class="hero-card__body">
+                    <p>
+                        Kırılan eşyalarını birlikte onarıyoruz.
+                    </p>
+                    <a href="#" class="hero-card__link">Detayları Gör →</a>
+                </div>
+
+            </article>
+
+            <article class="hero-card hero-card--green">
+
+                <div class="hero-card__header">
+                    <h3>İkinci El</h3>
+                </div>
+
+                <div class="hero-card__body">
+                    <p>
+                        Kullanılabilir eşyaları yeniden dolaşıma kazandırıyoruz.
+                    </p>
+                    <a href="#" class="hero-card__link">Ürünlere Göz At →</a>
+                </div>
+
+            </article>
+
+            <article class="hero-card hero-card--yellow">
+
+                <div class="hero-card__header">
+                    <h3>Workshop</h3>
+                </div>
+
+                <div class="hero-card__body">
+                    <p>
+                        Üretmeyi ve öğrenmeyi birlikte deneyimliyoruz.
+                    </p>
+                    <a href="#" class="hero-card__link">Atölyeleri İncele →</a>
+                </div>
+
+            </article>
+
+            <article class="hero-card hero-card--blue">
+
+                <div class="hero-card__header">
+                    <h3>Kafe</h3>
+                </div>
+
+                <div class="hero-card__body">
+                    <p>
+                        Sohbet, dayanışma ve paylaşım için buluşuyoruz.
+                    </p>
+                    <a href="#" class="hero-card__link">Menüyü Gör →</a>
+                </div>
+
+            </article>
 
         </div>
 
     </div>
 
 </section>
-```

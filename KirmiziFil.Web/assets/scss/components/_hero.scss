@@ -1,51 +1,167 @@
+/* ==========================================
+   HERO
+========================================== */
+
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/radius" as *;
+@use "../abstracts/shadows" as *;
+@use "../abstracts/transitions" as *;
+
 .hero {
-    padding-block: $space-96;
+    position: relative;
+    min-height: clamp(60vh, 80vh, 90vh);
+    padding-bottom: $space-16;
+    padding-top: $space-0;
 }
 
-    .hero .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: $space-64;
-    }
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: $space-64;
+}
 
 .hero__content {
     display: flex;
     flex-direction: column;
-    gap: $space-24;
-}
-
-.hero__eyebrow {
-    color: $color-primary;
-    font-size: $text-sm;
-    font-weight: $font-semibold;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+    gap: $space-8;
+    padding-top: $space-8;
+    align-self: start;
+    margin-top: $space-16;
 }
 
 .hero__title {
+    display: flex;
+    flex-direction: column;
+    line-height: .95;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
     font-family: $font-heading;
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: 1;
-    color: $color-text;
+    font-weight: 800;
+}
+
+.hero__highlight {
+    color: $color-primary;
 }
 
 .hero__description {
-    max-width: 620px;
+    max-width: 580px;
+    font-size: 1rem;
+    line-height: 1.7;
     color: $color-text-muted;
-    font-size: $text-lg;
-    line-height: 1.8;
 }
 
 .hero__actions {
     display: flex;
     gap: $space-16;
-    margin-top: $space-16;
+    margin-top: $space-8;
 }
 
-.hero__illustration {
+.hero__image {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 650px;
+    align-self: start;
+    margin-top: $space-8;
+}
+
+.hero__elephant {
+    width: 80%;
+    max-width: 480px;
+    height: auto;
+}
+
+.hero__cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: $space-24;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-card {
+    border-radius: $radius-xs;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba($neutral-900, 0.15);
+    transition: .35s;
+}
+
+    .hero-card:hover {
+        transform: translateY(-10px);
+    }
+
+.hero-card__header {
+    position: relative;
+    padding: $space-16 $space-24;
+    background-image: url("/images/hero/card-grain-texture.svg");
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    background-size: 200px 200px;
+}
+
+    .hero-card__header h3 {
+        font-size: $text-xl;
+        font-weight: $font-bold;
+        color: white;
+        margin: 0;
+    }
+
+.hero-card__body {
+    position: relative;
+    background-color: $paper-base;
+    background-image: url("/images/hero/card-grain-texture.svg");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    padding: $space-24;
+}
+
+    .hero-card__body p {
+        font-size: $text-sm;
+        line-height: 1.6;
+        color: $color-text-muted;
+        margin-bottom: $space-16;
+    }
+
+.hero-card__link {
+    display: inline-block;
+    font-size: $text-sm;
+    font-weight: $font-semibold;
+    text-decoration: none;
+}
+
+    .hero-card__link:hover {
+        text-decoration: underline;
+    }
+
+.hero-card--red .hero-card__header {
+    background-color: $red-600;
+}
+
+.hero-card--red .hero-card__link {
+    color: $red-600;
+}
+
+.hero-card--green .hero-card__header {
+    background-color: $green-600;
+}
+
+.hero-card--green .hero-card__link {
+    color: $green-600;
+}
+
+.hero-card--yellow .hero-card__header {
+    background-color: $mustard-600;
+}
+
+.hero-card--yellow .hero-card__link {
+    color: $mustard-600;
+}
+
+.hero-card--blue .hero-card__header {
+    background-color: $blue-600;
+}
+
+.hero-card--blue .hero-card__link {
+    color: $blue-600;
 }
