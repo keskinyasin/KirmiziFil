@@ -4,11 +4,16 @@
 
 $z-hide: -1;
 $z-base: 1;
-$z-dropdown: 100;
-$z-sticky: 200;
-$z-fixed: 300;
-$z-overlay: 400;
-$z-modal: 500;
-$z-toast: 600;
-$z-tooltip: 700;
-$z-loader: 800;
+
+$z-header: 100;
+$z-dropdown: 200;
+$z-sticky: 300;
+$z-fixed: 400;
+
+$z-overlay: 500;
+$z-modal: 600;
+
+$z-toast: 700;
+$z-tooltip: 800;
+
+$z-loader: 900;

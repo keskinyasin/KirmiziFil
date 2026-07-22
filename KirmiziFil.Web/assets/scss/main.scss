@@ -27,6 +27,7 @@
 @use "components/modal";
 @use "components/section";
 @use "components/hero";
+@use "components/events" as event-component;
 
 @use "pages/home";
 @use "pages/repair";
@@ -34,5 +35,5 @@
 @use "pages/workshop";
 @use "pages/cafe";
 @use "pages/blog";
-@use "pages/events";
+@use "pages/events" as events-page;
 @use "pages/manifesto";

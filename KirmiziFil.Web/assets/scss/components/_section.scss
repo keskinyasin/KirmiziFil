@@ -1,9 +1,7 @@
-```scss
 /* ==========================================
    SECTION
 ========================================== */
-@use "../abstracts/spacing" as *
-;
+@import "../abstracts/spacing";
 
 .section {
     padding-block: $space-96;
@@ -28,5 +26,3 @@
 .section__description {
     max-width: 720px;
 }
-
-```

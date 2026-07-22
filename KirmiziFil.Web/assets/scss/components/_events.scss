@@ -1,0 +1,144 @@
+/* ==========================================
+   EVENTS
+========================================== */
+
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/radius" as *;
+@use "../abstracts/shadows" as *;
+@use "../abstracts/transitions" as *;
+
+.events {
+    padding-top: $space-32;
+    padding-bottom: $space-64;
+}
+
+.events__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $space-32;
+}
+
+.events__title {
+    font-family: $font-heading;
+    font-size: $text-2xl;
+    font-weight: $font-bold;
+    color: $color-text;
+    margin: 0;
+}
+
+.events__link {
+    font-size: $text-sm;
+    font-weight: $font-semibold;
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.events__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-24;
+    width: 100%;
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    gap: $space-16;
+    background-color: transparent;
+    border: 1px solid $neutral-900;
+    border-radius: $radius-xs;
+    padding: $space-16;
+    min-height: 100px;
+    min-width: 0; // BUNU EKLE — asıl çözüm burada
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform $transition-fast;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+}
+
+.event-card__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: $radius-xs;
+    color: white;
+}
+
+.event-card--red .event-card__date {
+    background-color: $red-600;
+}
+
+.event-card--green .event-card__date {
+    background-color: $green-600;
+}
+
+.event-card--yellow .event-card__date {
+    background-color: $mustard-600;
+}
+
+.event-card--blue .event-card__date {
+    background-color: $blue-600;
+}
+
+.event-card__day {
+    font-size: $text-lg;
+    font-weight: $font-bold;
+    line-height: 1;
+}
+
+.event-card__month {
+    font-size: .65rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.event-card__body {
+    min-width: 0;
+}
+
+.event-card__title {
+    font-size: $text-sm;
+    font-weight: $font-semibold;
+    color: $color-text;
+    margin: 0 0 $space-8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event-card__meta {
+    font-size: .75rem;
+    color: $color-text-muted;
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+    .events__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .events__list {
+        grid-template-columns: 1fr;
+    }
+}
