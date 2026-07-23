@@ -17,7 +17,7 @@
 
     </a>
 
-    <ul class="nav__menu">
+    <ul class="nav__menu" id="navMenu">
 
         <li><a href="#" class="nav__link">Repair</a></li>
 
@@ -28,6 +28,12 @@
         <li><a href="#" class="nav__link">Etkinlikler</a></li>
 
         <li><a href="#" class="nav__link">Blog</a></li>
+
+        <li class="nav__mobile-actions">
+            <a href="#" class="btn btn--primary btn--md">
+                Topluluğa Katıl
+            </a>
+        </li>
 
     </ul>
 
@@ -45,5 +51,11 @@
         </a>
 
     </div>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+    </button>
 
 </nav>

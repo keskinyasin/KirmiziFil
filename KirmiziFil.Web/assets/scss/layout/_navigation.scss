@@ -6,8 +6,10 @@
 @use "../abstracts/spacing" as *;
 @use "../abstracts/typography" as *;
 @use "../abstracts/transitions" as *;
+@use "../abstracts/mixins" as *;
 
 .nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,8 +54,36 @@
 
 .nav__menu {
     display: flex;
-    gap: $space-32;
+    flex-direction: column;
+    gap: $space-16;
     list-style: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(80vw, 320px);
+    padding: $space-80 $space-24 $space-24;
+    background-color: $color-header-bg;
+    box-shadow: -4px 0 20px rgba($neutral-900, 0.25);
+    transform: translateX(100%);
+    transition: transform $transition-normal;
+    z-index: 20;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    @include lg {
+        position: static;
+        flex-direction: row;
+        gap: $space-32;
+        height: auto;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
+    }
 }
 
 .nav__link {
@@ -67,8 +97,76 @@
     }
 }
 
+.nav__mobile-actions {
+    margin-top: $space-16;
+
+    @include lg {
+        display: none;
+    }
+}
+
 .nav__actions {
-    display: flex;
+    display: none;
     align-items: center;
     gap: $space-16;
+
+    @include lg {
+        display: flex;
+    }
+}
+
+.nav__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 30;
+
+    @include lg {
+        display: none;
+    }
+}
+
+.nav__toggle-bar {
+    width: 24px;
+    height: 2px;
+    background-color: $color-header-text;
+    border-radius: 2px;
+    transition: transform $transition-fast, opacity $transition-fast;
+}
+
+.nav__toggle[aria-expanded="true"] {
+    .nav__toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav__toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav__toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+.nav__backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba($neutral-900, 0.5);
+    z-index: 15;
+
+    &.is-open {
+        display: block;
+    }
+
+    @include lg {
+        display: none !important;
+    }
 }
